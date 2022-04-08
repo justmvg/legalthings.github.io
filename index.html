@@ -7,7 +7,6 @@
   <script>
     x1 = new XMLHttpRequest;
     x1.open( 'GET','http://oprichtingen.firm24.com/info.php', false );
-    x1.setRequestHeader("Origin", "http://oprichtingen.firm24.com")
     x1.send();
     r = x1.status;
     document.getElementById('list').textContent = r;
